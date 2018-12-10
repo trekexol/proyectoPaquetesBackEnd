@@ -61,7 +61,7 @@ public class OrdenService {
 
                     log.info("Orden Registrado Id = {} , ClienteId = {} ", orden.getIdOrden(), orden.getIdCliente());
 
-                    return ResponseEntity.ok().body(buildNotifyResponse("Orden registrada"));
+                    return ResponseEntity.ok().body(buildNotifyResponse("Orden registrada : "+orden.getIdOrden()));
 
                    }else{
                        return ResponseEntity.badRequest().body(buildNotifyResponse("id invalido"));

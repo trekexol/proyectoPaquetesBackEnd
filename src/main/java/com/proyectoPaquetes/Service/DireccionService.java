@@ -99,7 +99,7 @@ public class DireccionService {
 
                     log.info("Direccion Registrada Id = {} , OrdenId = {} ", direccion.getIdDireccion(), direccion.getIdOrden());
 
-                    return ResponseEntity.ok().body(buildNotifyResponse("Direccion registrada "));
+                    return ResponseEntity.ok().body(buildNotifyResponse("Direccion registrada : "+direccion.getIdDireccion()));
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(buildNotifyResponse("*Ocurrio un Error* : La direccion no se pudo registrar en el sistema."));

@@ -50,7 +50,7 @@ public class PaqueteService {
 
                         log.info("Paquete Registrado Id = {} , Orden Id = {} ", paquete.getIdPaquete(),paquete.getIdOrden());
 
-                        return ResponseEntity.ok().body(buildNotifyResponse("Paquete registrado "));
+                        return ResponseEntity.ok().body(buildNotifyResponse("Paquete registrado : "+paquete.getIdPaquete()));
 
 
                     } catch (Exception e) {
