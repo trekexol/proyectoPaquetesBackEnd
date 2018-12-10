@@ -7,7 +7,6 @@ import lombok.ToString;
 
 @Data
 @ToString
-
 public class PaqueteResponse {
 
     private String idPaquete;

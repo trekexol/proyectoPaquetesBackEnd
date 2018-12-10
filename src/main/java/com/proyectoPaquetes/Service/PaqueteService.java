@@ -32,6 +32,7 @@ public class PaqueteService {
 
 
             public ResponseEntity<Object> register(PaqueteSignUpCommand command,String idOrden) {
+               try{
                 log.debug("About to be processed [{}]", command);
 
                 if (ordenRepository.existsByIdOrden(Long.parseLong(idOrden))) {
@@ -61,6 +62,10 @@ public class PaqueteService {
                     return ResponseEntity.badRequest().body(buildNotifyResponse("id invalido"));
                 }
 
+               } catch (Exception e) {
+                   return ResponseEntity.badRequest().body(buildNotifyResponse("*Ocurrio un Error* :El Paquete no se pudo registrar en el sistema."));
+
+               }
             }
 
 
