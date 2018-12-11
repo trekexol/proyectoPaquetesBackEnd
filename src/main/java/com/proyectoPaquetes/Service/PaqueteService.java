@@ -79,9 +79,11 @@ public class PaqueteService {
 
             if (paquete != null) {
 
+                return ResponseEntity.ok().body(buildNotifyResponse("entro "));
 
+               // return ResponseEntity.ok(response);
 
-                List<PaqueteResponse> listResponses = new ArrayList<>();
+               /* List<PaqueteResponse> listResponses = new ArrayList<>();
                 paquete.forEach( i-> {
 
                     PaqueteResponse paqueteResponse = new PaqueteResponse();
@@ -100,7 +102,7 @@ public class PaqueteService {
 
                 response.setPaquetes(listResponses);
 
-                return ResponseEntity.ok(response);
+                return ResponseEntity.ok(response);*/
 
             } else
                 return ResponseEntity.badRequest().body(buildNotifyResponse("No se Encontraron Paquetes en la Orden"));
