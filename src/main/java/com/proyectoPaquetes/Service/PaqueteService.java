@@ -72,7 +72,7 @@ public class PaqueteService {
 
     public ResponseEntity<Object> buscarPaquetesDeUnaOrden(String idOrden){
         try{
-
+/*
             List<Paquete> paquete;
 
             paquete = paqueteRepository.findAllByIdOrden(Long.parseLong(idOrden));
@@ -83,7 +83,7 @@ public class PaqueteService {
 
                // return ResponseEntity.ok(response);
 
-               /* List<PaqueteResponse> listResponses = new ArrayList<>();
+                List<PaqueteResponse> listResponses = new ArrayList<>();
                 paquete.forEach( i-> {
 
                     PaqueteResponse paqueteResponse = new PaqueteResponse();
@@ -102,11 +102,12 @@ public class PaqueteService {
 
                 response.setPaquetes(listResponses);
 
-                return ResponseEntity.ok(response);*/
+                return ResponseEntity.ok(response);
 
             } else
                 return ResponseEntity.badRequest().body(buildNotifyResponse("No se Encontraron Paquetes en la Orden"));
-
+*/
+            return ResponseEntity.badRequest().body(buildNotifyResponse("-*Error*- No se Encontraron Paquetes de esta orden"));
 
         }catch(Exception e){
             return ResponseEntity.badRequest().body(buildNotifyResponse("-*Error*- No se Encontraron Paquetes de esta orden"));
