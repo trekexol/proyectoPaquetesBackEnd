@@ -23,9 +23,9 @@ public class MapQuestController {
 
 
     @RequestMapping(value = "/coordenadas", method = RequestMethod.GET)
-    public ResponseEntity search( @RequestParam("query") String query) {
+    public ResponseEntity search( @RequestParam("query") String query, @RequestParam("pais") String pais) {
         query = query.replace(" ", "");
-        return mapquestService.buscarLatitudLongitud(query);
+        return mapquestService.buscarLatitudLongitud(query,pais);
     }
 
     @RequestMapping(value = "/direccion/{lat}/{lng}", method = RequestMethod.GET)

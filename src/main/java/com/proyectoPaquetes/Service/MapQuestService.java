@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import com.proyectoPaquetes.command.Validation;
+import com.proyectoPaquetes.command.ValidarPais;
 import com.proyectoPaquetes.command.ClienteUpdateCommand;
 
 import org.springframework.web.client.RestTemplate;
@@ -34,7 +34,8 @@ public class MapQuestService {
 
     private final String SECRETODELCONSUMIDOR = "5UnSkjUiMhFhsjhr";
 
-    public ResponseEntity<Object> buscarLatitudLongitud( String searchTerm){
+    public ResponseEntity<Object> buscarLatitudLongitud( String searchTerm,String pais){
+
 
         String apiAddressGet = "http://open.mapquestapi.com/geocoding/v1/address?key="+CLAVEDELCONSUMIDOR+"&location="+searchTerm;
 
@@ -47,12 +48,16 @@ public class MapQuestService {
 
         location = locations.get(0).getLocations();
 
+       String paisDosLetras= "";
+
+       paisDosLetras= retornarPais(pais);
+
 
         if (location.isEmpty()) {
             log.info("Search has not been sucessfull");
             return ResponseEntity.badRequest().body(buildNotifyResponse("no_result."));
         }else {
-            return ResponseEntity.ok(buildResponseApis(location));
+            return ResponseEntity.ok(buildResponseApis(location,paisDosLetras));
         }
 
 
@@ -75,11 +80,12 @@ public class MapQuestService {
         location = locations.get(0).getLocations();
 
 
+
         if (location.isEmpty()) {
             log.info("Search has not been sucessfull");
             return ResponseEntity.badRequest().body(buildNotifyResponse("no_result."));
         }else {
-            return ResponseEntity.ok(buildResponseApis(location));
+            return ResponseEntity.ok(buildResponseApis(location,"No se Encontro el Pais"));
         }
 
 
@@ -88,41 +94,42 @@ public class MapQuestService {
 
 
 
-    private MapQuestResponse buildResponseApis(List<LocationsData>  locationData) {
+    private MapQuestResponse buildResponseApis(List<LocationsData>  locationData,String pais) {
 
         List<LocationResponse> mapQuestResponses = new ArrayList<>();
         locationData.forEach( i-> {
 
+
                      LocationResponse locationResponse =new LocationResponse();
+            if((i.getAdminArea1().equals(pais))||(pais.equals("No se Encontro el Pais"))) {
+                locationResponse.setStreet(i.getStreet());
 
-                     locationResponse.setStreet(i.getStreet());
+                locationResponse.setAdminArea1(i.getAdminArea1());
+                locationResponse.setAdminArea3(i.getAdminArea3());
+                locationResponse.setAdminArea4(i.getAdminArea4());
+                locationResponse.setAdminArea5(i.getAdminArea5());
+                locationResponse.setAdminArea6(i.getAdminArea6());
+                locationResponse.setAdminArea1Type(i.getAdminArea1Type());
+                locationResponse.setAdminArea3Type(i.getAdminArea3Type());
+                locationResponse.setAdminArea4Type(i.getAdminArea4Type());
+                locationResponse.setAdminArea5Type(i.getAdminArea5Type());
+                locationResponse.setAdminArea6Type(i.getAdminArea6Type());
 
-                     locationResponse.setAdminArea1(i.getAdminArea1());
-                     locationResponse.setAdminArea3(i.getAdminArea3());
-                     locationResponse.setAdminArea4(i.getAdminArea4());
-                     locationResponse.setAdminArea5(i.getAdminArea5());
-                     locationResponse.setAdminArea6(i.getAdminArea6());
-                     locationResponse.setAdminArea1Type(i.getAdminArea1Type());
-                     locationResponse.setAdminArea3Type(i.getAdminArea3Type());
-                     locationResponse.setAdminArea4Type(i.getAdminArea4Type());
-                     locationResponse.setAdminArea5Type(i.getAdminArea5Type());
-                     locationResponse.setAdminArea6Type(i.getAdminArea6Type());
-
-                     locationResponse.setDragPoint(i.getDragPoint());
-                     locationResponse.setGeocodeQualityCode(i.getGeocodeQualityCode());
-                     locationResponse.setLat(i.getLatLng().getLat());
-                     locationResponse.setLng(i.getLatLng().getLng());
-                     locationResponse.setLinkId(i.getLinkId());
-                     locationResponse.setUnknownInput(i.getUnknownInput());
-                     locationResponse.setType(i.getType());
-                     locationResponse.setSideOfStreet(i.getSideOfStreet());
-                     locationResponse.setPostalCode(i.getPostalCode());
-                     locationResponse.setMapUrl(i.getMapUrl());
-                     locationResponse.setGetGeocodeQuality(i.getGetGeocodeQuality());
+                locationResponse.setDragPoint(i.getDragPoint());
+                locationResponse.setGeocodeQualityCode(i.getGeocodeQualityCode());
+                locationResponse.setLat(i.getLatLng().getLat());
+                locationResponse.setLng(i.getLatLng().getLng());
+                locationResponse.setLinkId(i.getLinkId());
+                locationResponse.setUnknownInput(i.getUnknownInput());
+                locationResponse.setType(i.getType());
+                locationResponse.setSideOfStreet(i.getSideOfStreet());
+                locationResponse.setPostalCode(i.getPostalCode());
+                locationResponse.setMapUrl(i.getMapUrl());
+                locationResponse.setGetGeocodeQuality(i.getGetGeocodeQuality());
 
 
-            mapQuestResponses.add(locationResponse);
-
+                mapQuestResponses.add(locationResponse);
+            }
 
 
                 }
@@ -134,6 +141,29 @@ public class MapQuestService {
         return response;
 
     }
+
+
+
+    public String retornarPais(String pais){
+
+        ValidarPais validar = new ValidarPais();
+
+        String arrayPaises[] = validar.getArrayPaises();
+
+        for(int contador = 0; contador < validar.getArrayPaises().length ;contador ++){
+            if(arrayPaises[contador].equals(pais)){
+
+                String arrayPaisesDosLetras[] = validar.getArrayPaisesDosLetras();
+                return arrayPaisesDosLetras[contador];
+            }
+      }
+
+
+
+        return "No se Encontro el Pais";
+    }
+
+
 
         private NotifyResponse buildNotifyResponse(String message) { //MUESTRA UN MENSAJE DE NOTIFICACIÓN
         NotifyResponse respuesta = new NotifyResponse();

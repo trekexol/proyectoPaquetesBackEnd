@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7f849a73-004e-4591-b2fe-71c8b1663a4b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/BloqueoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/BloqueoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/DireccionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/DireccionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/repository/DireccionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/repository/DireccionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/Service/DireccionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/Service/DireccionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/Service/OrdenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/Service/OrdenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/Service/MapQuestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/controller/MapQuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectoPaquetes/controller/MapQuestController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +21,8 @@
       <file leaf-file-name="ClienteService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/ClienteService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+            <state relative-caret-position="612">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,11 +30,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BloqueoService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BloqueoService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/BloqueoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
+            <state relative-caret-position="578">
               <caret line="47" column="111" selection-start-line="47" selection-start-column="111" selection-end-line="47" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidarPais.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidarPais.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="7" selection-end-column="6" />
+              <folding>
+                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#740#741#0" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,32 +59,8 @@
       <file leaf-file-name="ClienteResponse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/ClienteResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="136">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BloqueoSignUpCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/BloqueoSignUpCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-              <folding>
-                <element signature="e#769#770#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClienteController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/ClienteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -79,40 +68,11 @@
       <file leaf-file-name="ClienteDesbloqueo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteDesbloqueo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="187">
               <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClienteSignUpCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/ClienteSignUpCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cliente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/model/Cliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -120,20 +80,53 @@
       <file leaf-file-name="Validation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/Validation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="357">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClienteLoginCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteLoginCommand.java">
+      <file leaf-file-name="ValidationRules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidationRules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="27" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="27" />
+            <state relative-caret-position="119">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidPassword.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidPassword.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapQuestService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="87" column="87" selection-start-line="87" selection-start-column="87" selection-end-line="87" selection-end-column="87" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapQuestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -161,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/ClienteResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/PaqueteSignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteSignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/model/Ordenes.java" />
@@ -200,8 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/DireccionResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/DireccionSignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/repository/OrdenRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenDireccionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/PaqueteResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/PaqueteService.java" />
@@ -212,10 +202,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteDesbloqueo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/ClienteService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/BloqueoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidarPais.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="264" />
     <option name="y" value="36" />
     <option name="width" value="1037" />
@@ -229,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,12 +324,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/UCAB/5to semestre/Parte 1/Ingenieria del Software/Proyecto Entrega Final/project-tercera-entrega/project-tercera-entrega" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -440,7 +433,7 @@
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33282208" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21522693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25841874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -463,20 +456,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/ProyectoPaquetesApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/PaqueteSignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/BloqueoController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/BloqueoResponse.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -489,13 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidationRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -611,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/PaqueteResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -685,9 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -712,23 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="92" column="50" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/DireccionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,9 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2125">
           <caret line="143" selection-start-line="143" selection-end-line="143" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,29 +699,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteLoginCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="27" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="27" selection-start-line="16" selection-start-column="32" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/ClienteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
+        <state relative-caret-position="663">
           <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,65 +720,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding>
-            <element signature="e#769#770#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/ClienteSignUpCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="663">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/model/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
+        <state relative-caret-position="238">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/ClienteResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="136">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/Validation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteDesbloqueo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="187">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/ClienteService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+        <state relative-caret-position="612">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,8 +766,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/BloqueoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
+        <state relative-caret-position="578">
           <caret line="47" column="111" selection-start-line="47" selection-start-column="111" selection-end-line="47" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/Validation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidationRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidPassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="87" column="87" selection-start-line="87" selection-start-column="87" selection-end-line="87" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidarPais.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
