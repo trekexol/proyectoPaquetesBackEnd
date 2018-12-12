@@ -45,7 +45,7 @@ public class BloqueoService {
 
                         log.info("Bloqueo Registrado Id = {} ", user.getId());
 
-                        return ResponseEntity.ok().body(buildNotifyResponse("Bloqueo registrado "));
+                        return ResponseEntity.ok().body(buildNotifyResponse("Datos invalidos, al tercer fallido se bloquea"));
 
                 }catch(Exception e){
                    return ResponseEntity.badRequest().body(buildNotifyResponse("no se pudo registrar "));
@@ -99,7 +99,7 @@ public class BloqueoService {
 
             log.info("Bloqueo modificado Id = {} ", user.getId());
 
-            return ResponseEntity.ok().body(buildNotifyResponse("Bloqueo modificado "));
+            return ResponseEntity.ok().body(buildNotifyResponse("Datos invalidos "));
         }else
             return ResponseEntity.badRequest().body(buildNotifyResponse("Su Usuario fue Bloqueado"));
 

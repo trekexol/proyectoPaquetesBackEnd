@@ -128,6 +128,7 @@ public class DireccionService {
 
                     respuesta.setIdDireccion(String.valueOf(i.getIdDireccion()));
                     respuesta.setIdOrden(String.valueOf(i.getIdOrden()));
+                    respuesta.setIdCliente(String.valueOf(i.getIdCliente()));
                     respuesta.setDireccion1(i.getDireccion1());
                     respuesta.setDireccion2(i.getDireccion2());
                     respuesta.setCiudad(i.getCiudad());

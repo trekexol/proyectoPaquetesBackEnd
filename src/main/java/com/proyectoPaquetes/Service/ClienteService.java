@@ -1,12 +1,15 @@
 package com.proyectoPaquetes.Service;
 
 
+import com.proyectoPaquetes.command.ClienteDesbloqueo;
 import com.proyectoPaquetes.command.ClienteLoginCommand;
 import com.proyectoPaquetes.command.SignUp.BloqueoSignUpCommand;
 import com.proyectoPaquetes.command.SignUp.ClienteSignUpCommand;
 import com.proyectoPaquetes.model.Cliente;
 import com.proyectoPaquetes.model.Bloqueo;
+import com.proyectoPaquetes.model.Orden;
 import com.proyectoPaquetes.repository.ClienteRepository;
+import com.proyectoPaquetes.repository.OrdenRepository;
 import com.proyectoPaquetes.response.ClienteResponse;
 import com.proyectoPaquetes.response.NotifyResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +19,11 @@ import org.springframework.stereotype.Service;
 import com.proyectoPaquetes.command.Validation;
 import com.proyectoPaquetes.command.ClienteUpdateCommand;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 @Slf4j
 
@@ -29,6 +36,9 @@ public class ClienteService {
     private ClienteRepository clienteRepository;
     @Autowired
     private BloqueoService bloqueo;
+
+    @Autowired
+    private OrdenRepository ordenRepository;
 
 
     Validation validation = new Validation();
@@ -163,17 +173,52 @@ public class ClienteService {
     }
 
 
-    public ResponseEntity<Object> eliminarCliente(String id) {
+    public ResponseEntity<Object> desbloqueo(ClienteDesbloqueo command) {
         try {
+            log.debug("About to process [{}]", command);
+            Cliente u = clienteRepository.findFirstByCorreoElectronicoIgnoreCaseContaining(command.getCorreoElectronico());
+            if (u == null) {
+                log.info("Cannot find user with email={}", command.getCorreoElectronico());
 
-            clienteRepository.deleteById(Long.parseLong(id));
+                return ResponseEntity.badRequest().body(buildNotifyResponse("Dirección de correo no válida."));
+            } else {
 
-            return ResponseEntity.ok().body(buildNotifyResponse("El usuario ha sido eliminado"));
-        }catch(Exception e){
-                return ResponseEntity.badRequest().body(buildNotifyResponse("El Usuario no pudo ser eliminado "));
+                    if (!(bloqueo.VerificarSiEstaBloqueado(u.getCorreoElectronico()))) {
+
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.setTime(command.getFechaNacimiento());
+                        Calendar calendar2 = Calendar.getInstance();
+                        calendar2.setTime(u.getFechaNacimiento());
+
+
+                        if(calendar.get(Calendar.DAY_OF_MONTH) == calendar2.get(Calendar.DAY_OF_MONTH)){
+                           if(calendar.get(Calendar.MONTH) == calendar2.get(Calendar.MONTH)){
+                               if(calendar.get(Calendar.YEAR) == calendar2.get(Calendar.YEAR)){
+
+
+                            bloqueo.borrarBloqueo(u.getCorreoElectronico());
+
+                            return ResponseEntity.ok().body(buildNotifyResponse("Usuario fue desbloqueado"));
+
+                               }else
+                                   return ResponseEntity.badRequest().body(buildNotifyResponse("Las fechas de nacimiento no coinciden"));
+                           }else
+                               return ResponseEntity.badRequest().body(buildNotifyResponse("Las fechas de nacimiento no coinciden"));
+
+                           }else
+                            return ResponseEntity.badRequest().body(buildNotifyResponse("Las fechas de nacimiento no coinciden"));
+
+                    } else
+                        return ResponseEntity.badRequest().body(buildNotifyResponse("Su usuario No esta Bloqueado"));
+
 
             }
+        }catch(Exception e){
+            return ResponseEntity.badRequest().body(buildNotifyResponse("Ocurrio un error al verificar las fechas"));
+
+        }
     }
+
 
 
 

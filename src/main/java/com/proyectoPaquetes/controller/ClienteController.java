@@ -1,6 +1,7 @@
 package com.proyectoPaquetes.controller;
 
 
+import com.proyectoPaquetes.command.ClienteDesbloqueo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -44,9 +45,9 @@ public class ClienteController {
         return clienteService.update(command, id);
     }
 
-    @RequestMapping(value = "/eliminar/{id}", consumes = "application/json", method = RequestMethod.DELETE)
-    public ResponseEntity delete(@PathVariable("id") String id) {
-        return clienteService.eliminarCliente(id);
-    }
+    @RequestMapping(value = "/desbloquear", consumes = "application/json", method = RequestMethod.POST)
+    public ResponseEntity recuperar(@Valid @RequestBody ClienteDesbloqueo command) {
 
+        return clienteService.desbloqueo(command);
+    }
 }

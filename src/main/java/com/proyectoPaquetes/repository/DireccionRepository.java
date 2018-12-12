@@ -19,6 +19,7 @@ public interface DireccionRepository extends JpaRepository<Direccion, Long> {
 
     List<Direccion> findAllByIdOrden(Long idOrden);
 
+
     List<Direccion> findAllByIdClienteAndLongitudAndLatitud(Long idCliente,float longitud,float latitud);
 
 

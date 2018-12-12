@@ -2,8 +2,12 @@ package com.proyectoPaquetes.Service;
 
 import com.proyectoPaquetes.command.SignUp.OrdenSignUpCommand;
 import com.proyectoPaquetes.model.Orden;
+import com.proyectoPaquetes.model.OrdenDireccion;
 import com.proyectoPaquetes.model.Direccion;
+import com.proyectoPaquetes.model.Paquete;
 import com.proyectoPaquetes.repository.DireccionRepository;
+import com.proyectoPaquetes.repository.PaqueteRepository;
+import com.proyectoPaquetes.repository.OrdenDireccionRepository;
 import com.proyectoPaquetes.repository.OrdenRepository;
 import com.proyectoPaquetes.repository.ClienteRepository;
 import com.proyectoPaquetes.response.OrdenResponse;
@@ -36,6 +40,12 @@ public class OrdenService {
 
         @Autowired
         private OrdenDireccionService ordenDireccionService;
+
+        @Autowired
+        private OrdenDireccionRepository ordenDireccionRepository;
+
+        @Autowired
+        private PaqueteRepository paqueteRepository;
 
 
 
@@ -157,14 +167,98 @@ public class OrdenService {
     public ResponseEntity<Object> eliminarOrden(String id) {
         try {
 
-           ordenRepository.deleteById(Long.parseLong(id));
+             eliminarTodasLasDireccionesDeUnaOrden(Long.parseLong(id));
 
-            return ResponseEntity.ok().body(buildNotifyResponse("La Orden ha sido eliminada"));
+             eliminarTodasLasOrdenDireccionesDeUnaOrden(Long.parseLong(id));
+
+             eliminarTodosLosPaquetesDeUnaOrden(Long.parseLong(id));
+
+             if(ordenRepository.existsByIdOrden(Long.parseLong(id))) {
+                 ordenRepository.deleteById(Long.parseLong(id));
+             }else{
+                 return ResponseEntity.badRequest().body(buildNotifyResponse("No se encontro la Orden"));
+
+             }
+          return ResponseEntity.ok().body(buildNotifyResponse("La Orden ha sido eliminada"));
+
         }catch(Exception e){
             return ResponseEntity.badRequest().body(buildNotifyResponse("La Orden no pudo ser eliminada"));
 
         }
     }
+
+
+    public void eliminarTodasLasDireccionesDeUnaOrden(Long idOrden){
+
+            try{
+
+        List<Direccion> direcciones = null;
+
+       direcciones = direccionRepository.findAllByIdOrden(idOrden);
+
+        if(!(direcciones.isEmpty())) {
+
+            for (Direccion i : direcciones) {
+
+                direccionRepository.deleteById(i.getIdDireccion());
+
+            }
+        }
+
+        }catch(Exception e){
+            log.info("Ocurrio un error borrando todas las Direcciones");
+
+        }
+
+    }
+
+    public void eliminarTodasLasOrdenDireccionesDeUnaOrden(Long idOrden){
+        try {
+
+            List<OrdenDireccion> ordenDireccions;
+
+            ordenDireccions = ordenDireccionRepository.findAllByIdOrden(idOrden);
+
+            if(!(ordenDireccions.isEmpty())) {
+
+
+                for (OrdenDireccion i : ordenDireccions) {
+
+
+                    ordenDireccionRepository.deleteById(i.getIdOrden());
+
+                }
+            }
+
+        }catch(Exception e){
+            log.info("Ocurrio un error borrando todas las OrdenDirecciones");
+
+        }
+
+    }
+
+    public void eliminarTodosLosPaquetesDeUnaOrden(Long idOrden){
+        try {
+            List<Paquete> paquetes;
+
+            paquetes = paqueteRepository.findAllByIdOrden(idOrden);
+
+        if(!(paquetes.isEmpty())) {
+            for (Paquete i : paquetes) {
+
+
+                paqueteRepository.deleteById(i.getIdPaquete());
+
+            }
+        }
+
+        }catch(Exception e){
+            log.info("Ocurrio un error borrando todas los paquetes");
+
+        }
+
+    }
+
 
 
 
