@@ -86,41 +86,7 @@ public class OrdenService {
         }
 
 
-    public ResponseEntity<Object> register2(OrdenSignUpCommand command) {
-        log.debug("About to be processed [{}]", command);
 
-        try {
-
-            if (clienteRepository.existsById(Long.parseLong(command.getId()))) {
-
-                Orden orden = new Orden();
-
-                orden.setIdOrden(System.currentTimeMillis());
-                orden.setIdCliente(Long.parseLong(command.getId()));
-
-                orden.setDireccionEntrega(command.getDireccionEntrega());
-                orden.setDireccionRecoleccion(command.getDireccionRecoleccion());
-
-
-
-                ordenRepository.save(orden);
-
-
-                log.info("Orden Registrado Id = {} , ClienteId = {} ", orden.getIdOrden(), orden.getIdCliente());
-
-                return ResponseEntity.ok().body(buildNotifyResponse("Orden registrada : "+orden.getIdOrden()));
-
-            }else{
-                return ResponseEntity.badRequest().body(buildNotifyResponse("id invalido"));
-            }
-
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(buildNotifyResponse("*Ocurrio un Error* :La orden no se pudo registrar en el sistema."));
-
-        }
-
-
-    }
 
 
 

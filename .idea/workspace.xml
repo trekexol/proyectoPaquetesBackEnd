@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/OrdenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/OrdenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,15 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BloqueoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/BloqueoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="47" column="111" selection-start-line="47" selection-start-column="111" selection-end-line="47" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ValidarPais.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidarPais.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,13 +38,8 @@
       <file leaf-file-name="OrdenSignUpCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-              <folding>
-                <element signature="e#1713#1714#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
-                <element signature="e#1777#1778#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="248">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -60,8 +47,26 @@
       <file leaf-file-name="OrdenService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
+            <state relative-caret-position="884">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClienteSignUpCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/ClienteSignUpCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -69,20 +74,8 @@
       <file leaf-file-name="OrdenController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/OrdenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Validation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/Validation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -152,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/PaqueteSignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ClienteSignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/model/Ordenes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/OrdenSignUpCommand.java" />
@@ -200,8 +192,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/MapQuestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/ValidarPais.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/MapQuestService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/OrdenController.java" />
       </list>
     </option>
@@ -319,6 +312,13 @@
               <item name="proyectoPaquetes" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="postgres-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto-IG-2018-Back-End" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -428,10 +428,10 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33282208" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33282208" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25841874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25841874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -454,7 +454,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/BloqueoController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/response/BloqueoResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -700,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/ClienteSignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/model/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -807,29 +799,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-          <folding>
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
-            <element signature="e#1777#1778#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/Service/OrdenService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
+        <state relative-caret-position="884">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/ClienteSignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/command/SignUp/OrdenSignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proyectoPaquetes/controller/OrdenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="204">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
         </state>
       </provider>
     </entry>

@@ -14,7 +14,7 @@ import com.proyectoPaquetes.command.ValidationRules;
 @Data
 public class OrdenSignUpCommand implements Serializable {
 
-        private String id;
+
 
         @NotNull(message = "Por favor, introduzca su nombre.")
         @NotEmpty(message = "Por favor, introduzca su nombre.")
@@ -45,11 +45,5 @@ public class OrdenSignUpCommand implements Serializable {
         this.direccionRecoleccion = direccionRecoleccion;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 }
