@@ -126,7 +126,7 @@ public class ClienteService {
 
                         log.info("Usuario Registrado Id = {} ", user.getIdCliente());
 
-                        return ResponseEntity.ok().body(buildNotifyResponse("Cliente registrado :"+user.getIdCliente()));
+                        return ResponseEntity.ok().body(buildNotifyResponse(String.valueOf(user.getIdCliente())));
                     }else{
                         return ResponseEntity.badRequest().body(buildNotifyResponse("El Usuario no es mayor de edad "));
 
