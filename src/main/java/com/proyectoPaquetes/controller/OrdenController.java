@@ -24,9 +24,9 @@ public class OrdenController {
 
 
 
-        @RequestMapping(value = "/registrar/{id}", consumes = "application/json", method = RequestMethod.POST)
-        public ResponseEntity register(@Valid @RequestBody OrdenSignUpCommand command, @PathVariable("id") String id) {
-            return ordenService.register(command,id);
+        @RequestMapping(value = "/registrar", consumes = "application/json", method = RequestMethod.POST)
+        public ResponseEntity register(@Valid @RequestBody OrdenSignUpCommand command) {
+            return ordenService.register2(command);
         }
 
 
